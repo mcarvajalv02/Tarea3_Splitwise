@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/script.js" defer></script>
+    <title>Tarea3_Splitwise</title>
+</head>
+<body>
+    <!-- Página del home -->
+    <div id="home" class="page active">
+        <div id="header-home">
+            <h1>Splitwise</h1>
+            <div id="button-home">
+                <button>Home</button>
+                <button class="add" onclick="displayPage('expenses')">
+                    <img src="src/images/anadir.png" alt="Añadir" />
+                </button>
+            </div>
+        </div>
+        <div id="month">
+            <span>October 2024</span>
+            <div id="entries-home">
+                <!-- Aquí se agregarán los gastos -->
+            </div>
+        </div>
+        <div id="footer-home">
+            <button onclick="displayPage('users')">Users</button>
+            <button onclick="displayPage('balances')">Balances</button>
+        </div>
+    </div>
+
+    <!-- Página de usuarios -->
+    <div id="users" class="page">
+        <div id="header-users">
+            <h1>Splitwise</h1>
+            <div id="button-home">
+                <button>Users</button>
+            </div>
+        </div>
+        <div id="all-users">
+            <!-- Aquí se agregarán los usuarios -->
+        </div>
+        <div id="footer-home">
+            <button onclick="displayPage('home')">Home</button>
+            <button onclick="displayPage('addUsers')">Add user</button>
+        </div>
+    </div>
+
+    <!-- Página para añadir usuarios -->
+    <div id="addUsers" class="page">
+        <div id="header-users">
+            <h1>Splitwise</h1>
+            <div id="button-home">
+                <button>Add user</button>
+            </div>
+        </div>
+        <form id="myForm">
+            <div id="all-users">
+                <label for="text" class="username">Name:</label>
+                <input type="text" id="name-user" name="text" placeholder="Escribe tu nombre" required /><br /><br />
+                <label for="text" class="genre">Gender:</label>
+                <div class="gender-options">
+                    <div class="male">
+                        <input type="radio" id="male" name="gender" value="male" checked />
+                        <label for="male">Male</label><br />
+                    </div>
+                    <div class="female">
+                        <input type="radio" id="female" name="gender" value="female" />
+                        <label for="female">Female</label><br /><br />
+                    </div>
+                </div>
+                <div id="icons-users">
+                    <input type="radio" id="option1" name="icon" value="barbaroo" />
+                    <label for="option1">
+                        <img src="src/images/barbaroo.png" alt="Opción 1" />
+                    </label>
+                    <input type="radio" id="option2" name="icon" value="mago-de-hielo" />
+                    <label for="option2">
+                        <img src="src/images/mago-de-hielo.png" alt="Opción 2" />
+                    </label>
+                    <input type="radio" id="option3" name="icon" value="bruja" />
+                    <label for="option3">
+                        <img src="src/images/bruja.png" alt="Opción 3" />
+                    </label>
+                    <input type="radio" id="option4" name="icon" value="arquera" />
+                    <label for="option4">
+                        <img src="src/images/arquera.png" alt="Opción 4" />
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div id="footer-adduser">
+            <button onclick="displayPage('home')">Back</button>
+            <button onclick="addUserAndRedirect()">Confirm</button>
+        </div>
+    </div>
+
+    <!-- Página para añadir gastos -->
+    <div id="expenses" class="page">
+        <div id="header-users">
+            <h1>Splitwise</h1>
+            <div id="button-home">
+                <button>Add an expense</button>
+            </div>
+        </div>
+        <form id="expenseForm">
+            <div id="addExpenses">
+                <div class="selectUser">
+                    <div class="imgUser">
+                        <img src="src/images/emojiUser.png" alt="user" />
+                    </div>
+                    <label for="text" class="username">User:</label>
+                    <select id="select-user" name="users" required>
+                        <option value="" disabled selected>Elige un usuario</option>
+                    </select>
+                </div>
+                <div class="userNameDiv">
+                    <div class="imgAmount">
+                        <img src="src/images/gemas.png" alt="dinero" />
+                    </div>
+                    <label for="text" class="username">Amount:</label>
+                    <input type="number" id="expense-amount" name="text" step="0.01" required />
+                </div>
+                <div class="titleDiv">
+                    <div class="imgTitle">
+                        <img src="src/images/cofre.png" alt="titulo" />
+                    </div>
+                    <label for="text" class="username">Title:</label>
+                    <input type="text" id="expense-title" name="text" placeholder="Escribe el título del gasto" required /><br />
+                </div>
+            </div>
+            <div id="footer-home">
+                <button onclick="displayPage('home')">Back</button>
+                <button type="submit">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Página para balances -->
+    <div id="balances" class="page">
+        <div id="header-users">
+            <h1>Splitwise</h1>
+            <div id="button-home">
+                <button>Balances</button>
+            </div>
+        </div>
+        <div id="addBalances">
+            <div id="entries-balances">
+                <!-- Aquí se agregarán los balances -->
+            </div>
+        </div>
+        <div id="footer-balances">
+            <button onclick="displayPage('home')">Home</button>
+            <button onclick="settleAllBalances()">Settle up</button>
+            
+        </div>
+    </div>
+</body>
+</html>
