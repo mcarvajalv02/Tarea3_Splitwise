@@ -15,8 +15,6 @@ body {
   height: 100vh;
 }
 
-
-
 .page {
   width: 100%;
   max-width: 400px;
@@ -55,7 +53,7 @@ body {
 }
 
 .page.active {
-  display: block; 
+  display: block;
 }
 
 #header-home,
@@ -79,7 +77,7 @@ body {
   color: white;
   font-size: 40px;
 }
-#header-users h1{
+#header-users h1 {
   margin: 0;
   position: absolute;
   top: 14%;
@@ -243,7 +241,6 @@ body {
   background-color: #21e9ff;
 }
 
-
 .input-field {
   border-radius: 4px;
   border: 1px solid black;
@@ -277,7 +274,7 @@ input[type="radio"][name="icon"]:checked + label img {
   margin-top: 13rem;
 }
 
-#footer-adduser{
+#footer-adduser {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -299,7 +296,7 @@ input[type="radio"][name="icon"]:checked + label img {
 }
 
 .gender-options {
-  margin-left:4rem ;
+  margin-left: 4rem;
   margin-top: 8.5rem;
   position: absolute;
 }
@@ -309,9 +306,7 @@ input[type="radio"][name="gender"] {
   margin-right: 5px;
 }
 
-
-
-#footer-adduser button{
+#footer-adduser button {
   background-color: #287bf7;
   border: none;
   padding: 10px;
@@ -387,7 +382,7 @@ label img {
   gap: 12px;
 }
 
-#footer-balances{
+#footer-balances {
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -398,7 +393,7 @@ label img {
   gap: 12px;
 }
 
-#footer-balances button{
+#footer-balances button {
   background-color: #287bf7;
   border: none;
   padding: 10px;
@@ -408,8 +403,7 @@ label img {
   font-size: 1em;
   font-weight: bold;
   width: 100%;
-  text-align: center;
-
+  text-align: center;
 }
 
 .imgUser img,
@@ -422,7 +416,7 @@ label img {
   border-radius: 4px;
 }
 
-#select-user{
+#select-user {
   border: 1px solid black;
   border-radius: 4px;
   text-align: center;
@@ -430,25 +424,25 @@ label img {
   margin-right: 8rem;
 }
 
-.img-user-details img{
+.img-user-details img {
   width: 60px;
   height: 60px;
 }
 
-.selectUser{
+.selectUser {
   display: flex;
   flex-direction: column;
 }
 
-#expense-amount{
+#expense-amount {
   margin-left: 4rem;
 }
 
-#expense-title{
+#expense-title {
   margin-left: 4rem;
 }
 
-.img-details img{
+.img-details img {
   height: 50px;
   width: 50px;
 }
